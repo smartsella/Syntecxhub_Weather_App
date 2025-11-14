@@ -42,19 +42,21 @@ const SearchBar = ({ onSearch, loading = false }) => {
 
       {/* Quick search suggestions */}
       <div className="flex flex-wrap gap-2 mt-4 justify-center">
-        {["New York", "London", "Tokyo", "Paris", "Sydney"].map((city) => (
-          <button
-            key={city}
-            onClick={() => {
-              setQuery(city);
-              onSearch(city);
-            }}
-            className="px-3 py-1 bg-white/60 backdrop-blur-sm rounded-full text-sm text-gray-700 hover:bg-white hover:shadow-sm transition-all duration-200 border border-gray-200"
-            disabled={loading}
-          >
-            {city}
-          </button>
-        ))}
+        {["Chennai", "Salem", "Madurai", "Coimbatore", "Bangalore"].map(
+          (city) => (
+            <button
+              key={city}
+              onClick={() => {
+                setQuery(city);
+                onSearch(city);
+              }}
+              className="px-3 py-1 bg-white/60 backdrop-blur-sm rounded-full text-sm text-gray-700 hover:bg-white hover:shadow-sm transition-all duration-200 border border-gray-200"
+              disabled={loading}
+            >
+              {city}
+            </button>
+          )
+        )}
       </div>
     </div>
   );
